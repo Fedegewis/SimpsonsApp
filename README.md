@@ -1,25 +1,20 @@
 # SimpsonsApp - Revision del 2do Parcial
 
-## Objetivo
-Documentar de forma tecnica los 10 errores aprobados del proyecto `SimpsonsApp`, priorizando defectos reales de compilacion, ejecucion, arquitectura, lifecycle y UI.
-
-## Metodologia de Analisis
-Se realizo una revision estatica del codigo fuente, contrastando contratos entre capas, configuracion de dependencias, flujo de Paging, manejo de estado en Compose, navegacion y consistencia de tematizacion. El analisis se limito a los 10 hallazgos aprobados.
 
 ## Resumen Ejecutivo
 
-| # | Archivo | Categoria | Severidad |
-| - | ------- | --------- | --------- |
-| 1 | `domain/model/Episode.kt` | Error de compilacion | Critical |
-| 2 | `di/DataModule.kt` | Error de ejecucion | Critical |
-| 3 | `data/repository/EpisodeRepositoryImpl.kt` | Error de compilacion | Critical |
-| 4 | `domain/repository/EpisodeRepository.kt` / `data/repository/EpisodeRepositoryImpl.kt` | Error de compilacion | Critical |
-| 5 | `androidTest/ui/main/MainScreenTest.kt` | Error de compilacion | High |
-| 6 | `data/remote/EpisodeRemoteMediator.kt` | Error logico | Critical |
-| 7 | `data/repository/EpisodeRepositoryImpl.kt` | Error de arquitectura | High |
-| 8 | `main/MainScreen.kt` | Error de Android Lifecycle | Critical |
-| 9 | `detail/DetailViewModel.kt` / `detail/DetailScreen.kt` | Error de ejecucion | High |
-| 10 | `MainActivity.kt` | Error de UI | High |
+| # | Archivo | Categoria 
+| - | ------- | --------- 
+| 1 | `domain/model/Episode.kt` | Error de compilacion 
+| 2 | `di/DataModule.kt` | Error de ejecucion 
+| 3 | `data/repository/EpisodeRepositoryImpl.kt` | Error de compilacion 
+| 4 | `domain/repository/EpisodeRepository.kt` / `data/repository/EpisodeRepositoryImpl.kt` | Error de compilacion 
+| 5 | `androidTest/ui/main/MainScreenTest.kt` | Error de compilacion 
+| 6 | `data/remote/EpisodeRemoteMediator.kt` | Error logico 
+| 7 | `data/repository/EpisodeRepositoryImpl.kt` | Error de arquitectura 
+| 8 | `main/MainScreen.kt` | Error de Android Lifecycle 
+| 9 | `detail/DetailViewModel.kt` / `detail/DetailScreen.kt` | Error de ejecucion 
+| 10 | `MainActivity.kt` | Error de UI 
 
 ### Error 1 - Bloque `init` invalido fuera de la data class
 
@@ -362,6 +357,5 @@ Se pierden la paleta, tipografia y configuraciones centralizadas de `SimpsonsApp
 **Como deberia solucionarse**  
 Envolver el contenido con `SimpsonsAppTheme` en lugar de `MaterialTheme` directo.
 
-## Conclusiones
-El proyecto concentra fallas criticas en compilacion, configuracion de red, contrato entre capas y manejo de efectos en Compose. Tambien presenta problemas importantes de arquitectura de Paging, estados de detalle y consistencia visual.
+
 
