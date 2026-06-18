@@ -365,12 +365,3 @@ Envolver el contenido con `SimpsonsAppTheme` en lugar de `MaterialTheme` directo
 ## Conclusiones
 El proyecto concentra fallas criticas en compilacion, configuracion de red, contrato entre capas y manejo de efectos en Compose. Tambien presenta problemas importantes de arquitectura de Paging, estados de detalle y consistencia visual.
 
-## Prioridad de Correccion
-
-1. Corregir primero los errores que impiden compilar: `Episode.kt`, `EpisodeRepository.kt` y `EpisodeRepositoryImpl.kt`.
-2. Resolver luego la configuracion de Retrofit y la logica de `REFRESH` en `EpisodeRemoteMediator`.
-3. Ajustar el side effect de `MainScreen`, el flujo filtrado por temporada y el estado de detalle.
-4. Actualizar la prueba instrumentada y aplicar `SimpsonsAppTheme` en `MainActivity`.
-
-## Evaluacion Final
-Needs fixes before submission
